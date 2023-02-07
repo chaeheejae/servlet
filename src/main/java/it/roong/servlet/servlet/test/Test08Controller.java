@@ -12,7 +12,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 @WebServlet("/servlet/test08")
-public class Test08 extends HttpServlet {
+public class Test08Controller extends HttpServlet {
 	
 	@Override
 	public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException {
@@ -23,17 +23,17 @@ public class Test08 extends HttpServlet {
 		String keyword = request.getParameter("keyword");
 		
 		List<String> list = new ArrayList<>(Arrays.asList(
-		        "강남역 최고 맛집 소개 합니다.", 
-		        "오늘 기분 좋은 일이 있었네요.", 
-		        "역시 맛집 데이트가 제일 좋네요.", 
-		        "집에 가는 길에 동네 맛집 가서 안주 사갑니다.",
-		        "자축 저 오늘 생일 이에요."));
+		        "강남?�� 최고 맛집 ?���? ?��?��?��.", 
+		        "?��?�� 기분 좋�? ?��?�� ?��?��?��?��.", 
+		        "?��?�� 맛집 ?��?��?���? ?��?�� 좋네?��.", 
+		        "집에 �??�� 길에 ?��?�� 맛집 �??�� ?���? ?��갑니?��.",
+		        "?���? ?? ?��?�� ?��?�� ?��?��?��."));
 		
-		out.println("<html><head><title>검색결과</title></head> <body>");
+		out.println("<html><head><title>�??��결과</title></head> <body>");
 		
 		for(String result : list) {
 			if(result.contains(keyword)) {
-				result.replace(keyword, "<b>" + keyword + "</b>"); //키워드를 볼드체로 만들어서 변수에 저장하낟. 그리고 적용하기
+				result.replace(keyword, "<b>" + keyword + "</b>"); //?��?��?���? 볼드체로 만들?��?�� �??��?�� ???��?��?��. 그리�? ?��?��?���?
 				out.println(result + "<hr>");
 			}
 		}
