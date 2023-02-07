@@ -23,11 +23,11 @@ public class Test08Controller extends HttpServlet {
 		String keyword = request.getParameter("keyword");
 		
 		List<String> list = new ArrayList<>(Arrays.asList(
-		        "강남?�� 최고 맛집 ?���? ?��?��?��.", 
-		        "?��?�� 기분 좋�? ?��?�� ?��?��?��?��.", 
-		        "?��?�� 맛집 ?��?��?���? ?��?�� 좋네?��.", 
-		        "집에 �??�� 길에 ?��?�� 맛집 �??�� ?���? ?��갑니?��.",
-		        "?���? ?? ?��?�� ?��?�� ?��?��?��."));
+				"강남역 최고 맛집 소개 합니다.", 
+		        "오늘 기분 좋은 일이 있었네요.", 
+		        "역시 맛집 데이트가 제일 좋네요.", 
+		        "집에 가는 길에 동네 맛집 가서 안주 사갑니다.",
+		        "자축 저 오늘 생일 이에요."));
 		
 		out.println("<html><head><title>�??��결과</title></head> <body>");
 		
