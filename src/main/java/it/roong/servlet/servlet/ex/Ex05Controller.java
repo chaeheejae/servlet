@@ -14,9 +14,9 @@ public class Ex05Controller extends HttpServlet {
 	@Override
 	public void doPost(HttpServletRequest request, HttpServletResponse response) throws IOException {//post메소드는 브라우저로 접근할 수 없다. 
 		//.html을 활용해서 접근한다.
-		request.setCharacterEncoding("utf-8");
-		response.setCharacterEncoding("utf-8");
-		response.setCharacterEncoding("text/html");
+//		request.setCharacterEncoding("utf-8");
+//		response.setCharacterEncoding("utf-8");
+		response.setContentType("text/html");
 		PrintWriter out = response.getWriter();
 		
 		// 이름과 생년월일을 전달 받고 이름과 나이를 html 구성
