@@ -29,7 +29,7 @@
 	sum = 0;
 	for(String result : scoreList) {
 		if(result.equals("O")) {
-			sum += 10;
+			sum += 100 / scoreList.size();
 		}
 	}
 %>
