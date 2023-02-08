@@ -16,11 +16,11 @@
 
 
 <form class="container" method="get" action="/jsp/test/test03.jsp">
-	<h2>체격 조건 입력</h2>
-	<div>
-		<label><input type="int" name="height">cm</label>
-		<label><input type="int" name="weight">kg</label>
-		<button type="submit" class="btn btn-info">계산</button>
+	<h1>체격 조건 입력</h1>
+	<div class="d-flex col-8 align-items-end">
+		<input type="int" name="height" class="form-control">cm
+		<input type="int" name="weight" class="form-control ml-3">kg
+		<button type="submit" class="btn btn-info ml-3">계산</button>
 	</div>
 
 </form>

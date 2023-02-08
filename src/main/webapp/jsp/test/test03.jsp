@@ -15,30 +15,31 @@
 <body>
 
 <%
-	String weightString = request.getParameter("weight");
-	int weight = Integer.parseInt(weightString);
-	String heightString = request.getParameter("height");
-	int height = Integer.parseInt(heightString);
+	int weight = Integer.parseInt(request.getParameter("weight"));
+	int height = Integer.parseInt(request.getParameter("height"));
 
 	double bmi = weight / ((height / 100.0) * (height / 100.0));
 	
-	String result = "";
+	String result = null;
 	
 	if(bmi <= 20) {
 		result = "저체중";
-	} else if(bmi >= 21 && bmi <=25) {
+		
+	} else if(bmi <=25) {
 		result = "정상";
-	} else if(bmi >= 26 && bmi <= 30) {
+		
+	} else if(bmi <= 30) {
 		result = "과체중";
-	} else if(bmi >= 31){
+		
+	} else {
 		result = "비만";
 	}
 %>
 
-dfdfdf
-<h3><b>BMI 측정 결과</b></h3>
-<h2>당신은 <span class="text-info"><%=result %></span>입니다.</h2>
-<small>BMI 수치 <%=bmi %></small>
-
+<div class="container">
+	<h1>BMI 측정 결과</h1>
+	<div class="display-4">당신은 <span class="text-info"><%=result %></span>입니다.</div>
+	<div><small>BMI 수치 : <%=bmi %></small></div>
+</div>
 </body>
 </html>
