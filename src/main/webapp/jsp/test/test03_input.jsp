@@ -18,8 +18,8 @@
 <form class="container" method="get" action="/jsp/test/test03.jsp">
 	<h1>체격 조건 입력</h1>
 	<div class="d-flex col-8 align-items-end">
-		<input type="int" name="height" class="form-control">cm
-		<input type="int" name="weight" class="form-control ml-3">kg
+		<input type="text" name="height" class="form-control">cm
+		<input type="text" name="weight" class="form-control ml-3">kg
 		<button type="submit" class="btn btn-info ml-3">계산</button>
 	</div>
 
