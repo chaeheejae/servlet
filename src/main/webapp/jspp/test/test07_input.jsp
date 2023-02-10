@@ -17,7 +17,10 @@
 	<form method="post" action="/jspp/test/test07.jsp">
 		<h1>메뉴검색</h1>
 		<div>
-			<input type="text" name="menu" class="col-4 form-control mb-3">
+			<div class="d-flex">
+				<input type="text" name="menu" class="col-4 form-control mb-3 mr-2">
+				<input type="checkbox" name="unit" vlaue="on">4점 이하 제외
+			</div>
 			<button type="submit" class="btn btn-success">검색</button>
 		</div>
 	</form>

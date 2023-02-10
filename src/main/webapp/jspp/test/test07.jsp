@@ -1,9 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
     <%@ page import="java.util.*" %>
-    <%@ page import="javax.servlet.http.HttpServletRequest"%>
-    <%@ page import="javax.servlet.http.HttpServlet"%>
-    <%@ page import="java.io.IOException" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -36,8 +33,9 @@
 	list.add(map);
 	
 	String search = request.getParameter("menu");
+	String nuit = request.getParameter("unit");
 %>
-	
+
 <div class="container">
 	<h2 class="text-center">검색 결과</h2>
 	<h2><%=search %></h2>
@@ -51,12 +49,15 @@
 		</thead>
 		<tbody>
 			<%for(Map<String, Object> store:list) { 
-				if(search.equals(store.get("menu"))) {%>
-					<tr>
-						<td><%=store.get("menu") %></td>
-						<td><%=store.get("name") %></td>
-						<td><%=store.get("point") %></td>
-					</tr>	
+				if(search.equals(store.get("menu"))) {
+					if(unit.equals("on")) {
+						if(store.geet("point") >= 4.0) {%>
+							<tr>
+								<td><%=store.get("menu") %></td>
+								<td><%=store.get("name") %></td>
+								<td><%=store.get("point") %></td>
+							</tr>	
+					<% }%>
 				<% }%>
 			<%} %>	
 		</tbody>
