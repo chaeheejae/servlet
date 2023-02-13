@@ -4,7 +4,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<title>메뉴 검색</title>
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 
 	<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
@@ -14,12 +14,12 @@
 </head>
 <body>
 <div class="container">
-	<form method="post" action="/jspp/test/test07.jsp">
+	<form method="get" action="/jsp/test/test07.jsp">
 		<h1>메뉴검색</h1>
 		<div>
-			<div class="d-flex">
-				<input type="text" name="menu" class="col-4 form-control mb-3 mr-2">
-				<input type="checkbox" name="unit" vlaue="on">4점 이하 제외
+			<div class="d-flex p-0">
+				<input type="text" name="menu" class="form-control mb-3 mr-2 col-4">
+				<label class="d-flex align-items-center"><input type="checkbox" name="option" value="point">4점 이하 제외</label>
 			</div>
 			<button type="submit" class="btn btn-success">검색</button>
 		</div>

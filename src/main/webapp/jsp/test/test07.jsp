@@ -32,13 +32,12 @@
 	map = new HashMap<String, Object>() {{ put("name", "반올림피자"); put("menu", "피자"); put("point", 4.3); } };
 	list.add(map);
 	
-	String search = request.getParameter("menu");
-	String nuit = request.getParameter("unit");
+	String menu = request.getParameter("menu");
+	String option = request.getParameter("option");
 %>
 
 <div class="container">
 	<h2 class="text-center">검색 결과</h2>
-	<h2><%=search %></h2>
 	<table class="table text-center">
 		<thead>
 			<tr>
@@ -49,13 +48,17 @@
 		</thead>
 		<tbody>
 			<%for(Map<String, Object> store:list) { 
-				if(search.equals(store.get("menu"))) {%>
-							<tr>
-								<td><%=store.get("menu") %></td>
-								<td><%=store.get("name") %></td>
-								<td><%=store.get("point") %></td>
-							</tr>	
-					
+				if(menu.equals(store.get("menu"))) { 
+					//포인트 리미트가 체크된 상태이면4.0이상만 보여줘라
+					//포인트 리미트가 체크가 안된 상태 (option=null) 일 때 보여준다.
+					double point = (Double)store.get("point");
+					if(option == null && (option.equals("point") && point > 4.0)) {%>
+				<tr>
+					<td><%=store.get("menu") %></td>
+					<td><%=store.get("name") %></td>
+					<td><%=store.get("point") %></td>
+				</tr>	
+					<%} %>
 				<% }%>
 			<%} %>	
 		</tbody>
@@ -64,3 +67,23 @@
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
