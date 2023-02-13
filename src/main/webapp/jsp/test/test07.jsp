@@ -49,15 +49,13 @@
 		</thead>
 		<tbody>
 			<%for(Map<String, Object> store:list) { 
-				if(search.equals(store.get("menu"))) {
-					if(unit.equals("on")) {
-						if(store.geet("point") >= 4.0) {%>
+				if(search.equals(store.get("menu"))) {%>
 							<tr>
 								<td><%=store.get("menu") %></td>
 								<td><%=store.get("name") %></td>
 								<td><%=store.get("point") %></td>
 							</tr>	
-					<% }%>
+					
 				<% }%>
 			<%} %>	
 		</tbody>
