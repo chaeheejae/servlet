@@ -126,7 +126,7 @@ String id = request.getParameter("id");
 							<h5>앨범<%=music.get("album") %></h5>
 							<h5>재생시간<%=music.get("time") %></h5>
 							<h5>작곡가<%=music.get("composer") %></h5>
-간							<h5>작사가<%=music.get("lyricist") %></h5>
+							<h5>작사가<%=music.get("lyricist") %></h5>
 						</div>
 					</div>
 						<%} %>

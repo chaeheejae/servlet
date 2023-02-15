@@ -138,7 +138,7 @@ String title = request.getParameter("title");
 							
 							<tr>
 								<td><%=music.get("id") %></td>
-								<td><a href="/jspTemplete/test/test02/test02_output.jsp?id=<%=music.get("id") %>" class="nav-link"><%=music.get("title") %></a></td>
+								<td><a name="id" href="/jspTemplete/test/test02/test02_output.jsp?id=<%=music.get("id") %>" class="nav-link"><%=music.get("title") %></a></td>
 								<td><%=music.get("album") %></td>
 							</tr>
 							
