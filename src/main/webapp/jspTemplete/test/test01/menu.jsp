@@ -3,7 +3,7 @@
 
    	<nav class="main-menu bg-danger">
 		<ul class=" nav d-flex justify-content-around align-items-center list-unstyled text-white">
-			<li class="nav-item"><a href="/jspTemplete/test/test01/test01.jsp" name="category" class="nav-link">전체</a></li>
+			<li class="nav-item"><a href="/jspTemplete/test/test01/test01.jsp"  name="Category" class="nav-link">전체</a></li>
 			<li class="nav-item"><a href="/jspTemplete/test/test01/test01.jsp?category=지상파" name="category" class="nav-link">지상파</a></li>
 			<li class="nav-item"><a href="/jspTemplete/test/test01/test01.jsp?category=드라마" name="category" class="nav-link">드라마</a></li>
 			<li class="nav-item"><a href="/jspTemplete/test/test01/test01.jsp?category=예능" name="category" class="nav-link">예능</a></li>

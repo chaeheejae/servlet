@@ -59,10 +59,10 @@
   
 	
    String category = request.getParameter("category");
+   String all = request.getParameter("allCategory");
 %>
 
 <div id="wrap">
-	<h2><%=category %></h2>
 	<jsp:include page="header.jsp"/>
 	
 	<jsp:include page="menu.jsp"/>
@@ -76,10 +76,10 @@
 						<td>카테고리</td>
 					</tr>
 				</thead>
-			<tbody>
-			<h2><%=category %></h2>
-			<% for(Map<String, String> channel : list) {
-				if(category.equals(channel.get("category"))) {
+			<tbody> 
+			<% for(Map<String, String> channel : list) { %>
+				
+				<%if(category == null || category.equals(channel.get("category"))) {
 		     %>
 		     
 				<tr>
